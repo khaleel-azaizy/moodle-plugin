@@ -1,0 +1,214 @@
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.full-weekly-calendar .my-calendar{
+    width: 98%;
+    margin-left:2rem ;
+    border: none;
+    gap: 0;
+}
+.full-weekly-calendar .calendar-header{
+    margin-bottom: 0;
+}
+.weekly-calendar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    animation: animation 0.8s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5rem;
+    border-radius: 1em;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  .full-weekly-calendar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    
+  }
+ .weekly-today-number{
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.3em;
+  padding: 5px 0;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: #000000 1px solid;
+  color: #ff0000;
+  }
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    margin-top: 45px;
+    height: 151rem;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #000000;
+    
+    
+  }
+  
+  .time-slot {
+    height: 100px;
+
+  }
+ 
+  .weekly-calendar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .weekly-calendar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    margin:5px;
+  }
+
+  .weekly-calendar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .weekly-calendar::-webkit-scrollbar-thumb:hover {
+    background: #555555c9;
+  }
+  .week-grid {
+    display: flex;
+    flex: 1;
+    height: 151rem;
+  }
+  .week-grid .event-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    width: 90%;
+    z-index: 1;
+    
+  }
+  .week-grid .event-item::before {
+    content: '';
+    display: block;
+    width: 10000px;
+    height: 1px;
+    background-color: transparent;
+    border-top: #000000 1px dashed;
+    position: absolute;
+    top: 0;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .week-grid .event-item::after {
+    content: '';
+    display: block;
+    width: 10000px;
+    height: 1px;
+    opacity: 0.2;
+    background-color: transparent;
+    border-bottom: #000000 1px dashed;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  .event-item h4{
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+    width: 100%; 
+    overflow-wrap: break-word; 
+  }
+  .day-column {
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(2400, 1px);
+    border-left: 1px solid #000000;
+    position: relative;
+  }
+  
+  .day-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;
+    padding: 5px 0;
+    position: absolute;
+    background-color: #f5f5f500;
+    border-bottom: #000000 1px solid;
+  }
+  
+  .day-events {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .event-time {
+    font-size: 0.9em;
+    margin: 0;
+}
+  .day-column {
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(2400, 1px);
+    border-left: 1px solid #000000;
+    position: relative;
+  }
+  
+  .day-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;
+    padding: 5px 0;
+    position: absolute;
+    background-color: #f5f5f500;
+    border-bottom: #000000 1px solid;
+  }
+  
+  .day-events {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .event-time {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .full-weekly-calendar .weekly-calendar .delete-button{
+    background: transparent;
+    border: none;
+    padding: 0.1em 0.5em;
+    border-radius: 1em;
+    color: #000000;
+    position: relative;
+    right: 0.2em;
+    margin-left: 0.5em;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.3s;
+  } 
+ 
+ 
+  @media  (max-width: 1114px) {
+    .full-weekly-calendar{
+      width: 100%;
+      
+    }
+    
+    
+  }
